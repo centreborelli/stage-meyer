@@ -1,0 +1,110 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{amsmath}
+%\usepackage[osf,sups]{Baskervaldx} % lining figures
+%\usepackage[bigdelims,cmintegrals,vvarbb,baskervaldx]{newtxmath} % math font
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+% hyperrref configuration: remove ugly boxes and colors, keep urls in blue
+\hypersetup{colorlinks,linkcolor=black,citecolor=black,urlcolor={blue!80!black}}
+
+
+% paragraphs
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+% margins
+%\addtolength{\hoffset}{-3em}
+%\addtolength{\textwidth}{6em}
+%\addtolength{\voffset}{-3em}
+%\addtolength{\textheight}{6em}
+
+% macros
+\def\ud{\mathrm{d}}
+
+\begin{document}
+\thispagestyle{empty}
+
+{\bf
+	Formule de Poisson pour les quasi-cristaux
+}
+
+{\bf Encadrants}:\\
+Rafael Grompone von Gioi \verb+<rafael.grompone@ens-paris-saclay.fr>+\\
+Enric Meinhardt-Llopis \verb+<enric.meinhardt@ens-paris-saclay.fr>+
+
+{\bf Objectif.}
+L'objectif final du stage est de construire des figures qui illustrent le la théorie
+des quasi-cristaux développée par Yves Meyer le long des 50 dernières années.
+Au cours du projet, on rencontrera et on étudiera les concepts proches mais
+différents de quasi-cristal, mesure cristalline, ensemble de Meyer, pavage
+apériodique.
+Un outil essentiel sera une formule de Poisson généralisée
+\[
+	\sum_{x\in Q}\varphi(x) = \sum_{y\in Q^*}\widehat\varphi(y)
+\]
+où~$Q$ est un sous-ensemble discret du plan,~$Q^*$ son ``ensemble
+dual'' et~$\varphi$ une fonction de Schwartz quelconque.
+
+Avez-vous jamais vu un pavage du plan avec symétrie rotationnelle d'ordre~13~?
+Vous trouverez pas de figures sur internet.
+Les travaux de Meyer expliquent comment le construire, mais sans jamais le montrer.
+Dans ce stage on étudiera le procédé de construction et on produira des belles
+images.
+
+
+
+{\bf Contexte.}
+
+
+\medskip
+
+{\footnotesize
+\begin{tabular}{ccc}
+	\includegraphics[width=0.15\linewidth]{f/georev.png}&
+	\includegraphics[width=0.35\linewidth]{f/analogy.jpg}&
+	\includegraphics[width=0.3\linewidth]{f/jacomarp.png}\\
+	Géodésiques~\cite{rouviere} sur des surfaces &
+	Analogie gravité/géométrie &
+	Plongements locaux~\cite{darbouxi} d'orbites\\
+	&
+	(dessin typique mais incorrect!) &
+	de Kepler comme géodésiques.
+\end{tabular}
+}
+
+\medskip
+
+
+
+{\bf Déroulement.}
+Ce stage s'adresse aux étudiants qui souhaitent approfondir leurs connaissances
+en géométrie discrète et analyse harmonique.  Après l'étude du problème de
+base, plusieurs ouvertures sont possibles selon les préférences des étudiants:
+vers la théorie de nombres et l'approximation diophantienne, vers le traitement
+du signal et l'échantillonnage irrégulier, vers l'histoire des pavages
+apériodiques, ou même vers la représentation artistique de ceux-ci.
+
+
+\vspace{-1.5em}
+\renewcommand{\refname}{\normalsize Références}
+%
+\begin{thebibliography}{99}
+\vspace{-1em}
+{\footnotesize
+\bibitem{arnohooke}
+	V.I.~Arnold
+	{\it Huygens and Barrow, Newton and Hooke}
+	Birkhäuser, 1990
+}
+\end{thebibliography}
+
+
+\end{document}
+
+
+% vim:set tw=79 spell spelllang=fr:
