@@ -18,10 +18,10 @@
 \setlength{\parskip}{1em}
 
 % margins
-%\addtolength{\hoffset}{-3em}
-%\addtolength{\textwidth}{6em}
-%\addtolength{\voffset}{-3em}
-%\addtolength{\textheight}{6em}
+\addtolength{\hoffset}{-4em}
+\addtolength{\textwidth}{8em}
+\addtolength{\voffset}{-4em}
+\addtolength{\textheight}{8em}
 
 % macros
 \def\ud{\mathrm{d}}
@@ -38,42 +38,61 @@ Rafael Grompone von Gioi \verb+<rafael.grompone@ens-paris-saclay.fr>+\\
 Enric Meinhardt-Llopis \verb+<enric.meinhardt@ens-paris-saclay.fr>+
 
 {\bf Objectif.}
-L'objectif final du stage est de construire des figures qui illustrent le la théorie
-des quasi-cristaux développée par Yves Meyer le long des 50 dernières années.
-Au cours du projet, on rencontrera et on étudiera les concepts proches mais
-différents de quasi-cristal, mesure cristalline, ensemble de Meyer, pavage
-apériodique.
-Un outil essentiel sera une formule de Poisson généralisée
+L’objectif du stage est de construire des figures illustrant la théorie des
+quasi-cristaux, étudiée et développée par Yves Meyer au cours des cinquante
+dernières années.  Au fil du projet, on rencontrera et analysera
+plusieurs notions proches mais distinctes : quasi-cristaux, mesures
+cristallines, ensembles de Meyer et pavages apériodiques.
+Un outil essentiel seront les formules de Poisson
+généralisées, de la forme
 \[
 	\sum_{x\in Q}\varphi(x) = \sum_{y\in Q^*}\widehat\varphi(y)
 \]
 où~$Q$ est un sous-ensemble discret du plan,~$Q^*$ son ``ensemble
 dual'' et~$\varphi$ une fonction de Schwartz quelconque.
 
-Avez-vous jamais vu un pavage du plan avec symétrie rotationnelle d'ordre~13~?
-Vous trouverez pas de figures sur internet.
-Les travaux de Meyer expliquent comment le construire, mais sans jamais le montrer.
-Dans ce stage on étudiera le procédé de construction et on produira des belles
-images.
+%Avez-vous jamais vu un pavage du plan avec symétrie rotationnelle d'ordre~13~?
+%Vous en trouverez aucune image sur internet.  Les travaux de Meyer expliquent
+%comment le construire, mais sans jamais le montrer.  Dans ce stage on étudiera
+%le procédé de construction et on produira des belles images.
 
 
 
 {\bf Contexte.}
+%Des matériaux avec structure quasi-cristalline d'ordre 5, jugés ``impossibles''
+%par les christallographes, ont été découverts en 1984 (un
+%alliage~$\mathrm{Al}$-$\mathrm{Mn}$ refroidi rapidement).   Ce type d'objets
+%étaient déjà connus et étudiés par les mathématiciens, notamment Meyer (1968)
+%et Penrose (1974).  L'idée de leur construction est élémentaire: on projette
+%une grille régulière~$\mathbf{Z}^d$ sur un plan qui a une pente irrationnelle.
+%Pour~$d=3$ on obtient des pavages apériodiques, et en projetant~$\mathbf{Z}^5$
+%sur un plan orthogonal au vecteur~$(1,1,1,1,1)$ on obtient des structures
+%apériodiques avec symétrie d'ordre~5.  L'étude mathématique de ces objets passe
+%nécessairement par l'étude de leurs transformées de Fourier, qui correspond
+%physiquement à la technique de diffraction utilisée par les cristallographes.
+Des matériaux à structure quasi-cristalline d’ordre~5, longtemps jugés
+``impossibles'' par les cristallographes, ont été découverts en~1984 dans un
+alliage~$\mathrm{Al}$-$\mathrm{Mn}$ rapidement refroidi. Ces objets avaient
+pourtant été anticipés par les mathématiciens, notamment Meyer~(1968) et
+Penrose~(1974).  Leur construction repose sur une idée simple~: projeter
+le réseau~$\mathbf{Z}^d$ sur un plan de pente irrationnelle. Pour $d=3$, on
+obtient des pavages apériodiques~; en projetant~$\mathbf{Z}^5$ sur un plan
+orthogonal à~$(1,1,1,1,1)$, on construit des structures apériodiques à symétrie
+d’ordre 5.  Leur étude mathématique passe nécessairement par leurs transformées
+de Fourier, correspondant physiquement aux figures de diffraction utilisées en
+cristallographie.
 
 
 \medskip
 
 {\footnotesize
 \begin{tabular}{ccc}
-	\includegraphics[width=0.15\linewidth]{f/georev.png}&
-	\includegraphics[width=0.35\linewidth]{f/analogy.jpg}&
-	\includegraphics[width=0.3\linewidth]{f/jacomarp.png}\\
-	Géodésiques~\cite{rouviere} sur des surfaces &
-	Analogie gravité/géométrie &
-	Plongements locaux~\cite{darbouxi} d'orbites\\
-	&
-	(dessin typique mais incorrect!) &
-	de Kepler comme géodésiques.
+	\includegraphics[width=0.3\linewidth]{f/penta.png}&
+	\includegraphics[width=0.3\linewidth]{f/pixels.png}&
+	\includegraphics[width=0.28\linewidth]{f/qpt.jpg}\\
+	diffraction du~$\mathrm{Al}_6\mathrm{Mn}$ &
+	quasi-périodicité 1D &
+	quasi-périodicité 2D\\
 \end{tabular}
 }
 
@@ -83,7 +102,7 @@ images.
 
 {\bf Déroulement.}
 Ce stage s'adresse aux étudiants qui souhaitent approfondir leurs connaissances
-en géométrie discrète et analyse harmonique.  Après l'étude du problème de
+en géométrie discrète ou en analyse harmonique.  Après l'étude du problème de
 base, plusieurs ouvertures sont possibles selon les préférences des étudiants:
 vers la théorie de nombres et l'approximation diophantienne, vers le traitement
 du signal et l'échantillonnage irrégulier, vers l'histoire des pavages
@@ -97,9 +116,34 @@ apériodiques, ou même vers la représentation artistique de ceux-ci.
 \vspace{-1em}
 {\footnotesize
 \bibitem{arnohooke}
-	V.I.~Arnold
-	{\it Huygens and Barrow, Newton and Hooke}
+	V.I.~Arnold,
+	{\it Huygens and Barrow, Newton and Hooke},
 	Birkhäuser, 1990
+
+\bibitem{gratiasq}
+	D.~Gratias, M.~Quiquandon,
+	{\it Cristallographie: les quasicristaux et Yves Meyer},
+	Selecta SMF, 2023
+
+\bibitem{meyer68}
+	Y.~Meyer,
+	{\it  Nombres de Pisot et analyse harmonique},
+	C. R. Acad. Sci., Paris, 1968.
+
+\bibitem{meyer95}
+	Y.~Meyer,
+	{\it Quasicrystals, Diophantine approximation and algebraic numbers},
+	Houches, 1995
+
+\bibitem{meyer16}
+	Y.~Meyer,
+	{\it Measures with locally finite support and spectrum},
+	PNAS, 2016
+
+\bibitem{meyer23}
+	Y.~Meyer,
+	{\it Multidimensional Crystalline Measures},
+	Trans. R. Norw. Soc. Sci. Lett., 2023
 }
 \end{thebibliography}
 
