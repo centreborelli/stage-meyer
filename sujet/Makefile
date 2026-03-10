@@ -1,4 +1,4 @@
-PDF != echo sujet.pdf #ls *.tex | sed 's/\.tex/.pdf/'
+PDF != ls *.tex | sed 's/\.tex/.pdf/'
 
 pdf: $(PDF)
 
