@@ -137,25 +137,123 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Formule de Poisson Classique}
+	\frametitle{Formule de Poisson}
+
+	{\bf Sur points régulièrement espacés en~$\R$:}
+	\[
+		\only<1>{\sum_{n\in\Z}\varphi(n) = \sum_{k\in\Z}\widehat\varphi(k)}
+		\only<2>{\sum_{n\in\Z}\varphi({\color{red}\lambda}n) =
+		{\color{red}\tfrac1\lambda}\sum_{k\in\Z}\widehat\varphi\left({\color{red}\tfrac1\lambda}k\right)}
+		\only<3->{\sum_{p\in{\color{red}\lambda}\Z}\varphi(p) =
+	{\color{red}\tfrac1\lambda}\sum_{q\in{\color{red}\tfrac1\lambda}\Z}\widehat\varphi(q)}
+		%\qquad\qquad
+	\]
+
+	\only<4->{{\bf Sur un réseau en~$\R^2$:}}
+	\[
+		\only<4>{\sum_{n\in\Z^2}\varphi(n) = \sum_{k\in\Z^2}\widehat\varphi(k)}
+		\only<5->{\sum_{p\in{\color{red}A}\Z^2}\varphi(p) = {\color{red}\tfrac1{\mathrm{det}(A)}}\sum_{q\in{\color{red}{A^T}^{-1}}\Z^2}\widehat\varphi(q)}
+	\]
+
+	\only<6->{{\bf Cas général}}
+	\[
+		\only<6->{\sum_{p\in{\color{red}\Lambda}}\varphi(p) = {\color{red}c_\Lambda}\sum_{q\in{\color{red}\Lambda^*}}\widehat\varphi(q)}
+	\]
+
+	\only<7->{
+	\color{red}
+	\fbox{
+		{\bf Objectif du stage:}
+		Cas où~$\Lambda$ est un ``quasicrystal''
+	}
+}
 
 \end{frame}
 
 \begin{frame}
-	\frametitle{Ensembles harmonieux de Meyer}
+	\frametitle{Ensembles de Meyer : bibliographie}
+
+	\small
+
+	{\bf 1968.} Nombres de Pisot et analyse harmonique\\
+	{\bf 1972.} Algebraic numbers and harmonic analysis\\
+	{\bf 1995.} Quasicrystals, Diophantine approximation and algebraic numbers\\
+	{\bf 2008.} Quasicrystals are sets of stable sampling\\
+	{\bf 2016.} Measures with locally finite support and spectrum\\
+  {\bf 2023.} Multidimensional Crystalline Measures\\
+
+	\vfill
+	\pause
+	\includegraphics[width=\linewidth]{f/meyershot.png}
+
 
 \end{frame}
 
 \begin{frame}
 	\frametitle{Pavages de Penrose}
 
+	{\bf 1974}. Roger~Penrose,\\
+	\emph{
+	The role of aesthetics in pure and applied mathematical research
+}
+
+\vfill
+
+	\begin{tabular}{ccc}
+		\includegraphics[width=0.25\linewidth]{f/pensrosep1.png}&
+		\includegraphics[width=0.3\linewidth]{f/penrombi.png}&
+		\includegraphics[width=0.35\linewidth]{f/penrosep3.png}\\
+		type P1 & type P2 & type P3
+	\end{tabular}
+
+\vfill
+
 \end{frame}
 
 \begin{frame}
-	\frametitle{Cristallographie}
+	\frametitle{Construction mathématique : \underline{cut and project}}
 
-	\includegraphics[width=0.3\linewidth]{f/icosablue.png}
+\begin{tabular}{ccc}
+	\includegraphics[width=0.3\linewidth]{f/pixels2.png}&
+	\includegraphics[width=0.28\linewidth]{f/qpt.jpg}&
+	\includegraphics[width=0.26\linewidth]{f/arnofive.png}\\
+	quasi-périodicité 1D &
+	quasi-périodicité 2D &
+	projection~$\Z^5\to\R^2$ \\
+	%diffraction du~$\mathrm{Al}_6\mathrm{Mn}$ \\
+\end{tabular}
+\vfill
+\pause
+\begin{columns}
+	\begin{column}{0.3\linewidth}
+\includegraphics[width=\linewidth]{f/penta.png}\\
+\end{column}
+	\begin{column}{0.7\linewidth}
+diffraction du~$\mathrm{Al}_6\mathrm{Mn}$\\
+{\bf 1982} Dan Shechtman {\color{gray}Nobel chimie 2011}
+\end{column}
+\end{columns}
+
+
 \end{frame}
+
+
+\begin{frame}
+	\frametitle{Déroulement du stage}
+
+	1. Étudier les travaux de Meyer: {\color{gray}ensembles harmonieux, mesures
+	cristallines, pavages apériodiques, quasi-cristaux, $\ldots$}
+
+	2. Illustrer les objets qu'ils décrivent {\color{gray}(pavages avec symétrie d'ordre 13?, remplir l'espace avec tridecahèdres?)}
+	\pause
+
+	3. Imprimer les quasicristaux en 3D
+
+	\includegraphics[width=0.43\linewidth]{f/icosablue.png}
+	\includegraphics[width=0.43\linewidth]{f/icosamany.png}
+	%\includegraphics[width=0.3\linewidth]{f/icosaprint.png}
+\end{frame}
+
 
 \end{document}
 
