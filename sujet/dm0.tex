@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,11pt]{article}
 \usepackage[french]{babel}
 \usepackage{amsmath}
 \usepackage[osf,sups]{Baskervaldx} % lining figures
@@ -96,11 +96,40 @@ Démontrez une formule de Poisson généralisée
 \[
 	\sum_{p\in\Lambda}\varphi(p)
 	=
-	c_\Lambda\sum{q\in\Lambda^*}\widehat\varphi(q)
+	c_\Lambda\sum_{q\in\Lambda^*}\widehat\varphi(q)
 \]
 avec une constante~$c_\Lambda$ et un réseau dual~$\Lambda^*$ que l'on
 determinera explicitement à partir de~$\Lambda$.  Donnez une interprétation
-géométrique à~$c_\Lambda$ et~$\Lambda^*$.\\
-{\sl Indication: appliquez un changement de variable linéaire à la formule de Poisson classique sur~$\Z^2$.}
+géométrique pour~$c_\Lambda$ et~$\Lambda^*$.\\
+{\sl Indication: appliquez un changement de variable linéaire à la formule de
+Poisson classique sur~$\Z^2$.}
+
+{\bf Exercice 3. (fomule de Poisson au sens des distributions)}
+...
+
+{\bf Exercice 4. (transformée d'une projection)}
+On définit la~\emph{projection} sur l'axe~$x$ d'une fonction~$f(x,y)$ comme la
+fonction~$g(y)=\int_{-\infty}^\infty f(x,y)\ud y$.  Exprimez la transformée de
+Fourier de~$g$ en termes de celle de~$f$.  Généralisez cette formule à la
+projectoin orthogonale sur une droite quelconque (engendrée par un vecteur
+$\left(\begin{smallmatrix}\cos\alpha\\\sin\alpha\end{smallmatrix}\right)$), et à
+la projection orthogonale d'une fonction de~$\R^d$ sur un sous-espace
+de dimension~$k<d$.
+
+{\bf Exercice 5. (transformée d'une coupe)}
+La~\emph{coupe} horizontalle d'épaisseur~$2a$ de la fonction~$f(x,y)$ est la
+fonction~$f(x,y)\mathbf{1}_{[-a,a]}(y)$.  Exprimez la transformée de la coupe
+en termes de la transformée de~$f$.  Généralisez cette formule aux coupes
+de~$\R^d$ autour d'un sous-espace arbitraire de dimension~$k<d$.
+
+{\bf Exercice 6. (projection et coupe de distributions)}
+Étudiez la généralisation des exercices 3 et 4 quand~$f$ n'est pas une fonction
+mais une distribution ``discrète'', de la forme~$\sum_ia_i\delta(x-p_i)$
+
+{\bf Exercice 7. (pavage apériodique)}
+Considérez le peigne de Dirac bidimensionel~$P(x)=\sum_{p\in\Z^2}\delta(x-p)$.
+Calculez la projection+coupe de~$P$ sur une droite d'angle~$\alpha$.  Démontrez
+que la distribution résultante sur~$\R$ est périodique si et seulement
+si~$\tan\alpha\in\mathbf{Q}$, et calculez son période.
 
 \end{document}
