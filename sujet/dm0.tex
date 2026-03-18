@@ -1,0 +1,106 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[french]{babel}
+\usepackage{amsmath}
+\usepackage[osf,sups]{Baskervaldx} % lining figures
+\usepackage[bigdelims,cmintegrals,vvarbb,frenchmath,baskervaldx]{newtxmath} % math font
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+% hyperrref configuration: remove ugly boxes and colors, keep urls in blue
+\hypersetup{colorlinks,linkcolor=black,citecolor=black,urlcolor={blue!80!black}}
+
+
+% paragraphs
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+% margins
+\addtolength{\hoffset}{-3em}
+\addtolength{\textwidth}{6em}
+\addtolength{\voffset}{-3em}
+\addtolength{\textheight}{6em}
+
+% macros
+\def\ud{\mathrm{d}}
+\def\R{\mathbf{R}}
+\def\K{\mathbf{K}}
+\def\S{\mathcal{S}}
+\def\Z{\mathbf{Z}}
+
+\begin{document}
+
+\begin{center}\LARGE
+stage L3 : plan de travail semaines 1,2,3
+\end{center}
+
+{\bf Notations.}
+L'\underline{espace de Schwartz}~$\S(\R^d)$ ou simplement~$\S$ est l'ensemble
+des fonctions~$\mathcal{C}^\infty$ telles que toutes leurs dérivées sont à
+décroissance rapide
+\[
+	f\in\S(\R)
+	\iff
+	\forall p,n : \lim_{|x|\to\infty}\frac{\ud^n}{\ud x^n}f(x)=0
+\]
+et la même condition sur les dérivées partielles pour~$f\in\S(\R^d)$.
+
+On utilise la convention suivante pour la \underline{transformée de Fourier}
+en~$\R^d$:
+\[
+	\widehat f(y)=\int_{\R^d}e^{-2\pi i x\cdot y}\ud x
+\]
+définie d'abord dans~$\S$ ou~$L^1$ puis éténdue à~$L^2$ par continuité.
+
+Les \underline{distributions tempérées} sont le dual topologique de~$\S$.
+Ainsi, une distribution tempérée est un opérateur linéaire continu~$T:\S\to\K$,
+noté~$(T,\varphi)$ ou parfois~$\int T\varphi$.  Cette dernière notation est
+justifiée du fait que~$\S'$ contient toutes les fonctions localement
+intégrables à croissance polyomiale, via l'idéntification
+injective~$\left(f,\varphi\right)=\int f(x)\varphi(x)\ud x$.
+
+Un~\underline{réseau} de~$\R^2$ est un subgroupe additif généré par deux
+vecteurs linéairement indépendants.  L'exemple canonique est~$\Z^2$, généré par
+les vecteurs $\left(\begin{smallmatrix}1\\0\end{smallmatrix}\right)$
+et~$\left(\begin{smallmatrix}0\\1\end{smallmatrix}\right)$.  Notez que
+un même réseau peut être engendré par bases différentes, par
+exemple~$\Z^2$ est aussi générée par les vecteurs
+$\left(\begin{smallmatrix}1\\0\end{smallmatrix}\right)$
+et~$\left(\begin{smallmatrix}10\\1\end{smallmatrix}\right)$.
+On verra plus tard que toutes les bases d'un même réseau ont le même
+determinant.
+
+
+{\bf Exercice 0. (transformée au sens des distributions)}
+La transformée de Fourier d'une distribution tempérée~$T\in\S'$ est la
+distribution tempérée~$\widehat T\in\S'$ définie par~$\left(\widehat
+T,\varphi\right)=\left(T,\widehat\varphi\right)$.  Vérifiez que~$1$, $\delta$,
+$x\mapsto x^2$
+et~$x\mapsto1/\sqrt{|x|}$ sont des distributions tempérées, et calculez leurs
+transformées de Fourier.
+
+{\bf Exercice 1. (formule de Poisson)}
+Soit~$\varphi\in\S$, démontrez la formule de Poisson
+\[
+	\sum_{n\in\Z}\varphi(n)=\sum_{k\in\Z}\widehat\varphi(k)
+\]
+Généralisez cette formule au cas de points à distance
+arbitraire~$\displaystyle\sum_{p\in\lambda\Z}\varphi(p)=\cdots$ ainsi qu'à
+dimensions
+supérieures~$\displaystyle\sum_{\mathbf{n}\in\Z^d}\varphi(\mathbf{n})=\cdots$.
+
+{\bf Exercice 2. (réseau dual)}
+Soit~$\Lambda$ un réseau de~$\R^2$.
+Démontrez une formule de Poisson généralisée
+\[
+	\sum_{p\in\Lambda}\varphi(p)
+	=
+	c_\Lambda\sum{q\in\Lambda^*}\widehat\varphi(q)
+\]
+avec une constante~$c_\Lambda$ et un réseau dual~$\Lambda^*$ que l'on
+determinera explicitement à partir de~$\Lambda$.  Donnez une interprétation
+géométrique à~$c_\Lambda$ et~$\Lambda^*$.\\
+{\sl Indication: appliquez un changement de variable linéaire à la formule de Poisson classique sur~$\Z^2$.}
+
+\end{document}
