@@ -29,6 +29,12 @@
 \def\S{\mathcal{S}}
 \def\Z{\mathbf{Z}}
 
+% dirac comb symbol \Sha
+\DeclareFontFamily{U}{wncy}{}
+\DeclareFontShape{U}{wncy}{m}{n}{<->wncyr10}{}
+\DeclareSymbolFont{mcy}{U}{wncy}{m}{n}
+\DeclareMathSymbol{\Sha}{\mathord}{mcy}{"58} 
+
 \begin{document}
 
 \begin{center}\LARGE
@@ -46,19 +52,19 @@ décroissance rapide
 \]
 et la même condition sur les dérivées partielles pour~$f\in\S(\R^d)$.
 
-On utilise la convention suivante pour la \underline{transformée de Fourier}
-en~$\R^d$:
-\[
-	\widehat f(y)=\int_{\R^d}e^{-2\pi i x\cdot y}\ud x
-\]
-définie d'abord dans~$\S$ ou~$L^1$ puis éténdue à~$L^2$ par continuité.
-
 Les \underline{distributions tempérées} sont le dual topologique de~$\S$.
 Ainsi, une distribution tempérée est un opérateur linéaire continu~$T:\S\to\K$,
 noté~$(T,\varphi)$ ou parfois~$\int T\varphi$.  Cette dernière notation est
 justifiée du fait que~$\S'$ contient toutes les fonctions localement
 intégrables à croissance polyomiale, via l'idéntification
 injective~$\left(f,\varphi\right)=\int f(x)\varphi(x)\ud x$.
+
+On utilise la convention suivante pour la \underline{transformée de Fourier}
+en~$\R^d$:
+\[
+	\widehat f(y)=\int_{\R^d}e^{-2\pi i x\cdot y}\ud x
+\]
+définie d'abord dans~$\S$ ou~$L^1$ puis éténdue à~$L^2$ par continuité.
 
 Un~\underline{réseau} de~$\R^2$ est un subgroupe additif généré par deux
 vecteurs linéairement indépendants.  L'exemple canonique est~$\Z^2$, généré par
@@ -75,8 +81,8 @@ determinant.
 {\bf Exercice 0. (transformée au sens des distributions)}
 La transformée de Fourier d'une distribution tempérée~$T\in\S'$ est la
 distribution tempérée~$\widehat T\in\S'$ définie par~$\left(\widehat
-T,\varphi\right)=\left(T,\widehat\varphi\right)$.  Vérifiez que~$1$, $\delta$,
-$x\mapsto x^2$
+T,\varphi\right)=\left(T,\widehat\varphi\right)$.  Vérifiez que cette
+définition a un sens, que~$1$, $\delta$, $x\mapsto x^2$
 et~$x\mapsto1/\sqrt{|x|}$ sont des distributions tempérées, et calculez leurs
 transformées de Fourier.
 
@@ -104,8 +110,11 @@ géométrique pour~$c_\Lambda$ et~$\Lambda^*$.\\
 {\sl Indication: appliquez un changement de variable linéaire à la formule de
 Poisson classique sur~$\Z^2$.}
 
-{\bf Exercice 3. (fomule de Poisson au sens des distributions)}
-...
+{\bf Exercice 3. (fomule de Poisson avec distributions)}
+Justifiez que l'on peut écrire la formule de Poisson comme~$\widehat\Sha=\Sha$,
+si on définit le~\emph{peigne de Dirac}~$\Sha(x)=\sum_{n\in\Z}\delta(x-n)$.
+Proposez une notation pour les ``peignes de Dirac généralisés'' qui groupe
+toutes les formules des exercices 1 et 2.
 
 {\bf Exercice 4. (transformée d'une projection)}
 On définit la~\emph{projection} sur l'axe~$x$ d'une fonction~$f(x,y)$ comme la
@@ -123,13 +132,31 @@ en termes de la transformée de~$f$.  Généralisez cette formule aux coupes
 de~$\R^d$ autour d'un sous-espace arbitraire de dimension~$k<d$.
 
 {\bf Exercice 6. (projection et coupe de distributions)}
-Étudiez la généralisation des exercices 3 et 4 quand~$f$ n'est pas une fonction
-mais une distribution ``discrète'', de la forme~$\sum_ia_i\delta(x-p_i)$
+Étudiez la généralisation des exercices 4 et 5 quand~$f$ n'est pas une fonction
+mais une distribution ``discrète'', de la forme~$f(x)=\sum_ia_i\delta(x-p_i)$.
+
+\begin{tabular}{ccc}
+	\includegraphics[width=0.33\linewidth]{f/cutpro.png} &
+	\includegraphics[width=0.3\linewidth]{f/qpt.jpg} &
+	\includegraphics[width=0.3\linewidth]{f/penrombi.png} \\
+	$\Z^2\to\R^1$ &
+	$\Z^3\to\R^2$ &
+	$\Z^5\to\R^2$
+\end{tabular}
 
 {\bf Exercice 7. (pavage apériodique)}
-Considérez le peigne de Dirac bidimensionel~$P(x)=\sum_{p\in\Z^2}\delta(x-p)$.
-Calculez la projection+coupe de~$P$ sur une droite d'angle~$\alpha$.  Démontrez
-que la distribution résultante sur~$\R$ est périodique si et seulement
-si~$\tan\alpha\in\mathbf{Q}$, et calculez son période.
+Calculez la projection+coupe d'un peigne de Dirac
+bidimensionel~$\Sha=\sum_{p\in\Z^2}\delta(x-p)$ sur une droite
+d'angle~$\alpha$.  Démontrez que la distribution résultante sur~$\R$ est
+périodique si et seulement si~$\tan\alpha\in\mathbf{Q}$, et calculez son
+période.
+
+{\bf Exercice 8. (pavage de Penrose, partie 1)}
+L'espace orthogonal au vecteur~$(1,1,1,1,1)\in\R^5$ peut se décomposer comme
+produit orthogonal de deux sous-espaces de dimension~$2$.  Quelle est la
+dimension de cet ensemble de décompositions?  Étudiez sous quelles conditions
+la projection+coupe de~$\Z^5$ sur le premier sous-espace donne lieu à un pavage
+apériodique de~$\R^2$.
+
 
 \end{document}
